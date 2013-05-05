@@ -18,7 +18,7 @@ function responseContains {
    EXPECTED=$1
    ACTUAL=$2
    if [[ "$ACTUAL" != *"$EXPECTED"* ]] ; then
-      fail "'$EXPECTED' was not found in '$ACTUAL'"
+      fail "'$EXPECTED' was not found in results"
    fi
    pass 
 }
