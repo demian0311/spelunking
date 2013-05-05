@@ -1,7 +1,8 @@
 #!/bin/sh
 . spelunking.sh
 
-HOST='http://www.webservicex.net'
+# http://www.webservicex.net/uszip.asmx?WSDL
+
 SOAP_XML='
    <soap:Envelope 
       xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
@@ -12,13 +13,11 @@ SOAP_XML='
             <web:USZip>61312</web:USZip>
          </web:GetInfoByZIP>
       </soap:Body>
-   </soap:Envelope>
-   '
+   </soap:Envelope>'
 
 ACTUAL=$(curl -k -s \
    -X POST -d "$SOAP_XML" \
-   --header 'Content-Type: application/soap+xml;charset=UTF-8;action="http://www.webserviceX.NET/GetInfoByZIP"[\r][\n]' \
-   "$HOST/uszip.asmx")
-#echo $ACTUAL
+   --header 'Content-Type: application/soap+xml;charset=UTF-8' \
+   "http://www.webservicex.net/uszip.asmx")
 
 responseContains 'Arlington' "$ACTUAL"
