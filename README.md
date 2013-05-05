@@ -3,13 +3,19 @@
 ## Quick Start
 To run all of the scripts do this:
 
-      demian@shiv ~/code/spelunking>./run
+      ==================================================================================
+       ______   _________   ______   _    __  ______   _______  ______  ______  _______
+      / |      | | | | | \ / |  | \ | |  / / | |         | |   | |     / |        | |
+      '------. | | | | | | | |  | | | |-< <  | |----     | |   | |---- '------.   | |
+       ____|_/ |_| |_| |_| \_|__|_/ |_|  \_\ |_|____     |_|   |_|____  ____|_/   |_|
+      ==================================================================================
       [PASS] ./01_neidetcher_com_connectivity.sh
       [PASS] ./02_neidetcher_port_80.sh
       [PASS] ./03_neidetcher_feed.sh
       [FAIL] ./04_couchdb.sh: '{"okay":true,"id":"' was not found in results
       [PASS] ./google_com.sh
       [FAIL] ./yahoo_com.sh: 'Search the world's information' was not found in results
+      ==================================================================================
 
 Or you can just run one.  
 
