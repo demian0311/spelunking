@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# http://guide.couchdb.org/draft/security.html
+
+#HOST="http://127.0.0.1:5984"
+
+# create a database
+#curl -X PUT $HOST/spelunking
+
+# create an admin user
+#curl -X PUT $HOST/_config/admins/demian -d '"secret"'
+
+SHOST="https://demian:secret@127.0.0.1:5984"
+curl -X PUT $SHOST/spelunking/_design/log -d
+
+
+
