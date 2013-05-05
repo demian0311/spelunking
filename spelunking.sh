@@ -1,5 +1,13 @@
 #!/bin/sh
 
+function evaluateLastStatus {
+   if [ $? -eq 0 ] ; then
+      pass
+   else
+      fail "$1"
+   fi
+}
+
 function pass {
    tput setf 2
    echo "[PASS] $0"
