@@ -1,13 +1,5 @@
 #!/bin/sh
 
-function evaluateLastStatus {
-   if [ $? -eq 0 ] ; then
-      pass
-   else
-      fail "$1"
-   fi
-}
-
 function pass {
    tput setf 2
    echo "[PASS] $0"
@@ -20,6 +12,14 @@ function fail {
    echo "[FAIL] $0: $1" 
    tput sgr0
    exit 2
+}
+
+function evaluateLastStatus {
+   if [ $? -eq 0 ] ; then
+      pass
+   else
+      fail "$1"
+   fi
 }
 
 function responseContains {

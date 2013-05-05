@@ -6,11 +6,10 @@ JSON='{
    "message": "hello world"
    }'
 
-CREATE_RESULT=$(curl -k -s \
+ACTUAL=$(curl -k -s \
    -u 'demian:secret' \
    -X POST -d "$JSON" \
    --header "Content-Type: application/json" \
    "$HOST/spelunking")
-echo $CREATE_RESULT
 
-responseContains '{"ok":true,"id":"' "$CREATE_RESULT"
+responseContains '{"ok":true,"id":"' "$ACTUAL"
