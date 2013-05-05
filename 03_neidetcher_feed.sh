@@ -7,8 +7,4 @@ EXPECTED='Scala compiler'
 FEED_XML=$(wget -qO- $URL)
 echo $FEED_XML | grep -q "$EXPECTED"
 
-if [ $? -eq 0 ] ; then 
-   pass
-else
-   fail "could not find '$EXPECTED' in $URL"
-fi
+evaluateLastStatus "could not find '$EXPECTED' in $URL"
