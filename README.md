@@ -3,17 +3,16 @@
 ## Quick Start
 To run all of the scripts do this:
 
-      demian@shiv ~/code/spelunking>./run
+      demian@kabar-7 ~/code/spelunking>./run
       ==========================================
       = SMOKE TESTS                            =
       ==========================================
       [PASS] ./01_neidetcher_com_connectivity.sh
       [PASS] ./02_neidetcher_port_80.sh
       [PASS] ./03_neidetcher_feed.sh
-      [PASS] ./04_couchdb.sh
+      [FAIL] ./04_couchdb.sh: '{"ok":true,"id":"' was not found in results
       [PASS] ./05_webservicex_net_uszip.sh
       ==========================================
-      demian@shiv ~/code/spelunking>
 
 Or you can just run one.  
 
