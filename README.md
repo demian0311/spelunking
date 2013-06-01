@@ -40,10 +40,9 @@ validate non-HTTP services are alive (albeit at a
 minimal level) by using nmap to see if the port is up.
 
 ## CouchDB
-A running CouchDB instance a great stand-in to replicate
-a ReST-ful service.  Some of the scripts use this.  After
-installing, this is what I did to create the database and
-the admin user.
+A running CouchDB instance is a great stand-in to replicate
+a ReST-ful service.  After installing, this is what I did to 
+create the database and the admin user.
 
       #!/bin/sh
       curl -X PUT http://127.0.0.1:5984/spelunking
