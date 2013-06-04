@@ -30,12 +30,3 @@ function responseContains {
    fi
    pass 
 }
-
-function responseEquals {
-   EXPECTED=$1
-   ACTUAL=$2
-   if [ $ACTUAL == $EXPECTED ] ; then
-      pass
-   fi
-   fail "'$EXPECTED' was not equal to '$ACTUAL'"
-}
