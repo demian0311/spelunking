@@ -15,10 +15,8 @@ function fail {
 }
 
 function evaluateLastStatus {
-   if [ $? -eq 0 ] ; then
-      pass
-   else
-      fail "$1"
+   if [ $? -eq 0 ] ; then pass
+   else fail "$1"
    fi
 }
 
