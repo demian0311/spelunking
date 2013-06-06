@@ -4,14 +4,12 @@ function pass {
    tput setf 2
    echo "[PASS] $0"
    tput sgr0
-   exit 0
 }
 
 function fail {
    tput setf 4
    echo "[FAIL] $0: $1" 
    tput sgr0
-   exit 2
 }
 
 function evaluateLastStatus {

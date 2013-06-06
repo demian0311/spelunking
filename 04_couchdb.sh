@@ -13,3 +13,6 @@ ACTUAL=$(curl -k -s \
    "$HOST/spelunking")
 
 responseContains '{"ok":true,"id":"' "$ACTUAL"
+
+# see the README.md for instructions on how to
+# set up couchdb after you have it installed.

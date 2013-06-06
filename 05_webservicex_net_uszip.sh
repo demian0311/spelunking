@@ -1,7 +1,6 @@
 #!/bin/sh
 . spelunking.sh
-
-# http://www.webservicex.net/uszip.asmx?WSDL
+# WSDL: http://www.webservicex.net/uszip.asmx?WSDL
 
 SOAP_XML='
    <soap:Envelope 
