@@ -1,5 +1,5 @@
 #!/bin/sh
-. spelunking.sh
+. spelunking
 # WSDL: http://www.webservicex.net/uszip.asmx?WSDL
 
 SOAP_XML='

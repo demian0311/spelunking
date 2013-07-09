@@ -1,5 +1,5 @@
 #!/bin/sh
-. spelunking.sh
+. spelunking
 
 HOST='http://127.0.0.1:5984/'
 JSON='{

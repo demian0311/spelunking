@@ -1,5 +1,5 @@
 #!/bin/sh
-. spelunking.sh
+. spelunking
 
 URL='http://feeds.feedburner.com/neidetcher'
 EXPECTED='Scala compiler'
