@@ -1,0 +1,16 @@
+#!/bin/sh
+
+currDate=$(date +"%Y-%m-%d %H:%M")
+hostName=$(hostname -s)
+echo "<html><head><title>Smoke Tests</title></head><body>"
+echo "<pre><h1>Smoke Test</h1><hr/>"
+
+for script in *.sh; do
+   result=$(./$script)
+   if [ $? -eq 0 ] ; then echo "<font color='red'>$result</font>"
+   else echo "<font color='green'>$result</font>"
+   fi
+done
+
+echo "<hr/>${hostName} | ${currDate}"
+echo "</pre></body></html>"
