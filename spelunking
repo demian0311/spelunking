@@ -1,26 +1,29 @@
-#!/bin/sh
+#!/bin/bash
 
-function pass {
+pass(){
    echo "[PASS] $0"
    exit 1
 }
 
-function fail {
+fail(){
    echo "[FAIL] $0: $1" 
    exit 0
 }
 
-function evaluateLastStatus {
+evaluateLastStatus(){
    if [ $? -eq 0 ] ; then pass
    else fail "$1"
    fi
 }
 
-function responseContains {
+responseContains(){
    EXPECTED=$1
    ACTUAL=$2
-   if [[ "$ACTUAL" != *"$EXPECTED"* ]] ; then
+   echo "$ACTUAL" | grep "$EXPECTED" --quiet
+   if [ $? -eq 1 ] ; then 
       fail "'$EXPECTED' was not found in results"
    fi
    pass 
 }
+
+#responseContains "foo" "foobar"

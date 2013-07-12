@@ -14,7 +14,7 @@ SOAP_XML='
       </soap:Body>
    </soap:Envelope>'
 
-ACTUAL=$(curl -k -s \
+ACTUAL=$(curl -k -s -m 5 \
    -X POST -d "$SOAP_XML" \
    --header 'Content-Type: application/soap+xml;charset=UTF-8' \
    "http://www.webservicex.net/uszip.asmx")
