@@ -6,9 +6,9 @@ ATOM_NS="http://www.w3.org/2005/Atom"
 XPATH="//atom:feed/atom:author/atom:name"
 
 FEED_XML=$(wget -qO- $URL)
-AUTHOR_NAME=$(echo $FEED_XML | xml sel -N atom="$ATOM_NS" -t -m "$XPATH" -v "." -n)
+AUTHOR_NAME=$(echo $FEED_XML | xmlstarlet sel -N atom="$ATOM_NS" -t -m "$XPATH" -v "." -n)
 
-if [ "$AUTHOR_NAME" == "Demian Neidetcher" ]; then pass
+if [ "$AUTHOR_NAME" = "Demian Neidetcher" ]; then pass
 else fail
 fi
 
