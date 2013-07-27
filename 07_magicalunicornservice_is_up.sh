@@ -1,5 +1,5 @@
 #!/bin/sh
-. spelunking
+. ./spelunking
 
 HOST="magicalunicornservice.com"
 ACTUAL=$(nmap -P0 -p 80 $HOST 2>&1)
