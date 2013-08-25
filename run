@@ -6,7 +6,6 @@ echo "=========================================="
 
 for script in *.sh ; do
    result=$(./$script)
-   #echo "lastreturn: $?"
    if [ $? -eq 0 ] ; then tput setf 4
    else tput setf 2 
    fi
